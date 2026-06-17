@@ -1,16 +1,44 @@
-# React + Vite
+# Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Kanban-style task manager built with React, featuring drag-and-drop, persistent storage, and a clean, modern UI.
 
-Currently, two official plugins are available:
+🌐 **Live demo:** TU_LINK_DE_VERCEL_AQUI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Task Manager Screenshot](task-manager-screenshot.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🗂️ Three-column Kanban board (To do, In progress, Done)
+- 🖱️ Drag and drop tasks between columns
+- ➕ Add tasks with title, tag, column, and due date via modal form
+- 🏷️ Color-coded tags (UI, Backend, Docs, Bug, Setup, DevOps, Other)
+- 💾 Tasks persist in localStorage — no backend required
+- 📊 Live stats: total tasks, completed, in progress, and overall progress bar
+- 🗑️ Delete tasks with a single click
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Tailwind CSS 3
+- @hello-pangea/dnd (drag and drop)
+- Vite
+- Deployed on Vercel
+
+## Technical decisions
+
+- **Custom hook (`useTasks`)** — centralizes all state logic (add, delete, move, persist) separately from UI components, following the same pattern used in my [Weather App](https://github.com/TU_USUARIO/weather-app) project.
+- **Immutable state updates** — every update creates new arrays/objects instead of mutating existing ones, which is required for React to correctly detect changes and re-render.
+- **localStorage persistence** — chosen to keep the project fully client-side and easy to run without any backend setup.
+
+## Run locally
+
+```bash
+git clone https://github.com/TU_USUARIO/task-manager.git
+cd task-manager
+npm install
+npm run dev
+```
+
+## Author
+
+Eduardo Chan — [linkedin.com/in/chaneduardo](https://linkedin.com/in/chaneduardo)
