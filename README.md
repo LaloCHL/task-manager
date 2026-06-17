@@ -2,7 +2,7 @@
 
 A Kanban-style task manager built with React, featuring drag-and-drop, persistent storage, and a clean, modern UI.
 
-🌐 **Live demo:** TU_LINK_DE_VERCEL_AQUI
+🌐 [Live demo:](https://task-manager-blond-rho.vercel.app/)
 
 ![Task Manager Screenshot](task-manager-screenshot.png)
 
